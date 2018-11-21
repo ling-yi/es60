@@ -1,0 +1,22 @@
+<!--在字符串解构赋值中，字符串被转换成类似数组的对象，变量分别赋上对应的值-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var [a,b,c,d,e,f,g,h,i] = "生理， 为王  ";
+		console.log(a);//生
+		console.log(b);//理
+		console.log(c);//，
+		console.log(d);//“空格”
+		console.log(e);//为
+		console.log(f);//王
+		console.log(g);//“空格”
+		console.log(h);//“空格”
+		console.log(i);//undefined
+	</script>
+</html>

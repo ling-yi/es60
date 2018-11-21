@@ -1,0 +1,30 @@
+<!--
+	Number.isFinite函数：检查一个数值是否有穷。
+	
+	注意：ES5和ES6中的这个函数的区别与isNaN函数一样
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		console.log(Number.isFinite(1));//true
+		//Infinity是window对象下的一个常量，表示一个无穷数
+		console.log(Number.isFinite(Infinity));//false
+		
+		//ES6:Number.isFinite函数只对数值类型有效，对非数值类型的参数一律返回false
+		console.log(Number.isFinite('1'));//false
+		console.log(Number.isFinite('Infinity'));//false
+		
+		//ES5:isFinite()函数先对非数值类型参数进行数值转换，再进行判断
+		console.log(isFinite('1'));//true
+		console.log(isFinite('Infinity'));//false
+		console.log(isFinite('init'));//false
+		
+		
+	</script>
+</html>

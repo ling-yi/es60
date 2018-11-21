@@ -1,0 +1,28 @@
+<!--let声明的变量仅仅在自己的块级作用域起作用。-->
+<!--var声明的变量只能是全局的或者整个函数块的。-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+    <script>
+//  	var arr = [];
+//  	for(var i=0; i<10; i++){ 
+//  		arr[i] = function(){
+//  			alert(i);
+//  		}
+//  	}
+//  	arr[8](); //结果：10
+    	
+    	var arr = [];
+    	for(let i=0; i<10; i++){ 
+    		arr[i] = function(){
+    			alert(i);
+    		}
+    	}
+    	arr[8](); //结果：8
+    </script>
+</html>

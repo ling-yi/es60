@@ -1,0 +1,47 @@
+<!--
+	解构赋值的用途：
+		1 交换变量的值
+		2 提取函数返回的多个值
+		3 定义函数参数：方便提取JSON对象中想要的参数
+		4 函数参数的默认值
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		//1 交换变量的值
+//		var x = 1;
+//		var y = 2;
+//		[x,y] = [y,x];
+//		console.log(x);//2
+//		console.log(y);//1
+		
+//		//2 提取函数返回的多个值
+//		function demo(){
+//			return {"name":"张三","age":21}
+//		}
+//		var {name,age} = demo();
+//		console.log(name);//张三
+//		console.log(age);//21
+		
+//		//3 定义函数参数：方便提取JSON对象中想要的参数
+//		function demo({a,b,c}){
+//			console.log("姓名："+a);//姓名：张三
+//			console.log("身高："+b);//身高：1.72m
+//			console.log("体重："+c);//体重：50kg
+//		}
+//		demo({a:"张三",c:"50kg",d:"100000",b:"1.72m",})
+		
+		//4 函数参数的默认值
+		function demo({name="张三"}){
+			console.log("姓名："+name);
+		}
+		demo({});//姓名：张三
+		demo({"name":"李四"});//姓名：李四
+	</script>
+</html>

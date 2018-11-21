@@ -1,0 +1,27 @@
+<!--
+	标签模板是一种新语法，用来实现过滤用户的非法输入和多语言转换。
+	标签模板不是模板，是函数调用的一种特殊形式。“标签”指的是函数，紧跟在后面的模板字符串是它的参数。
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var name = "张三";
+		var height = 1.8;
+		
+		//标签+模板字符串
+		tagFn`他叫${name},身高${height}米.`;
+		
+		//定义一个函数，作为标签
+		function tagFn(arr,v1,v2){
+			console.log(arr);
+			console.log(v1);
+			console.log(v2);
+		}
+	</script>
+</html>

@@ -1,0 +1,3 @@
+1 ES5中的全局函数isNaN函数，isFinite函数，parseInt函数，parseFloat函数，在ES6的标准下，被移植到了Number对象下。这四个函数在使用之前必须指明是Number对象下的函数，否则会被默认为window下的函数。
+2 将全局函数移植到其他对象下的原因：慢慢减少全局性的函数，把全局函数合理地规划到其他对象下，渐渐实现语言的模块化。
+3 ES6对Number对象新增了isInteger函数、极小常量Number.EPSILON、安全整数。此外，对Math对象扩展了17个新函数。

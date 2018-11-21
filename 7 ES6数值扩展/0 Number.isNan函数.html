@@ -1,0 +1,34 @@
+<!--
+	Number.isNaN函数：用于判断传入的是否是非数值，注意：是判断非数值，而不是判断数值，isNaN的全称是：is not a number.
+	
+	ES5与ES6中isNaN函数的区别：
+	
+	1	ES5:isNaN()其实是window.isNaN(),是全局函数。
+		ES6:Number.isNaN()是Number对象下的函数。
+	2	ES5中的isNaN函数会对不是数值类型的参数进行类型转换，之后再进行判断。
+		ES6中的Number.isNaN函数不会对不是数值类型的参数进行数值转换，二十直接返回false。所以，要注意在使用Number.isNaN函数回false时，不代表参数就是一个数值，也有可能是因为参数是非数值类型的。
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		console.log(Number.isNaN(NaN));//true
+		console.log(Number.isNaN(2.5));//false
+		console.log(isNaN(2.5));//false
+		
+		//'abc'是字符串，Number.isNaN不做类型转换，直接返回false
+		console.log(Number.isNaN("abc"));//false
+		console.log(Number.isNaN("2.5"));//false
+		
+		//'abc'无法转换为一个数值，返回true
+		console.log(isNaN("abc"));//true
+		
+		//'2.5'能转换为一个数值，返回false
+		console.log(isNaN("2.5"));//false
+	</script>
+</html>

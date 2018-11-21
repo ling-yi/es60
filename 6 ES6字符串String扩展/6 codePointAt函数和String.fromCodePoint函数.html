@@ -1,0 +1,35 @@
+<!--
+	codePoint()函数能正确识别4个字节的字符，并返回字符的码点的十进制数。对于2个字节的字符，返回的与charCodeAt()方法一样。
+	String.fromCodePoint()函数：函数的参数是一个字符对应的码点，返回的结果是对应的字符(包括4字节字符)
+	charAt()函数：返回指定位置的字符。
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var str1 = "前端";
+		var str2 = "𠮷";
+		
+		console.log(str1.length);//2
+		console.log(str2.length);//2
+		
+		console.log(str1.charAt(0));//前
+		console.log(str1.charAt(1));//端
+		
+		console.log(str2.charAt(0));//�
+		console.log(str2.charAt(1));//�
+		
+		console.log(str2.codePointAt(0));//134071
+		console.log(str2.codePointAt(1));//57271
+		console.log(str2.charCodeAt(1));//57271
+		
+		console.log(String.fromCodePoint(134071));//𠮷
+		console.log(String.fromCodePoint(57271));//�
+		
+	</script>
+</html>

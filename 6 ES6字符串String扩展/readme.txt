@@ -1,0 +1,1 @@
+ES6给字符串带来的扩展有：模板字符串，标签模板，repeat函数，includes函数，startsWith函数，endsWith函数，codePointAt函数，String.fromCodePoint函数，String.raw函数

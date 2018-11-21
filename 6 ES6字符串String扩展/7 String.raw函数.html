@@ -1,0 +1,18 @@
+<!--
+	String.raw()是模板字符串的标签函数，返回模板字符串的原始字面量值。
+	String.raw()是唯一一个内置的模板字符串标签函数，因为它太常用
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		console.log(`hello\nworld`);
+		console.log(String.raw`hello\nworld`);//hello\nworld
+		console.log(String.raw("hello\nworld"));//错误，因为String.raw()函数是模板字符串的标签函数
+	</script>
+</html>

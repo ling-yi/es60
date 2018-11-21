@@ -1,0 +1,38 @@
+<!--
+	1 keys()函数
+		作用：对数组的索引键进行遍历，返回一个遍历器
+		
+	2 values()函数
+		作用：对数组的元素进行遍历，返回一个遍历器
+		
+	3 entires()函数
+		作用：对数组的键值对进行遍历，返回一个遍历器
+		
+	4 for..of是ES6的新增特性，后面讲解
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		for(let index of ['a','b'].keys())
+		{
+			console.log(index);
+		}
+		
+		for(let value of ['a','b'].values())
+		{
+			console.log(value);
+		}
+		
+		for(let [index,value] of ['a','b'].entries())
+		{
+			console.log(index,value);
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,24 @@
+<!--函数内不能用let重新声明函数的参数-->
+<!--因为参数作为参数时就相当于被声明了-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		function say(word){
+//			let word = 'hello Jack';//报错：用let重新声明word参数
+//			alert(word);
+//		}
+//		say('hello Lili')
+
+		function say(word){
+			var word = 'hello Jack';
+			alert(word);
+		}
+		say('hello Lili')//输出‘hello Jack’
+	</script>
+</html>

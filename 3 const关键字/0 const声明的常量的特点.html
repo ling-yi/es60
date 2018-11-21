@@ -1,0 +1,49 @@
+<!--
+	const声明的常量的特点：
+	1 常量不可修改
+	2 与let关键字一样，只在块级作用域起作用
+	3 与let关键字一样，const不存在变量提升，必须先声明后使用
+	4 与let关键字一样，不可重复声明同一个变量
+	5 声明后必须要赋值
+	6 用const声明一个对象类型的常量，就是传址赋值。不可修改的是对象在内存中的地址，而不是对象本身
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		//1 常量不可修改
+//		const Name = '张三';
+//		Name = '李四';//错误，企图修改常量Name
+
+//		//2 与let关键字一样，只在块级作用域起作用
+//		if(a){
+//			const Name = '张三';
+//		}
+//		alert(Name);//错误，Name未定义
+
+//		//3 与let关键字一样，const不存在变量提升，必须先声明后使用
+//		if(1){
+//			alert(Name);//错误：名称Name未定义
+//			const Name = '张三';
+//		}
+		
+//		//4 与let关键字一样，不可重复声明同一个变量
+//		var Name = '张三';
+//		const Name = '李四';//标识符'Name'已被声明
+
+//		//5 声明后必须要赋值
+//		const NAME;//const中缺失初始化器
+		
+		//6 用const声明一个对象类型的常量，就是传址赋值。不可修改的是对象在内存中的地址，而不是对象本身
+		const Person = {"name":"张三"};
+		Person.name = "李四";
+		Person.age = 20;
+		console.log(Person);//结果：成功输出{name: "李四", age: 20}
+		Person = {};//错误：常变量的赋值。因为企图给常量Person赋新值（）新地址
+	</script>
+</html>

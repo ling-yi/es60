@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		var a=1;
+//		(function(){
+//			alert(a);
+//			var a = 2;
+//		})(); //结果：undefined(变量提升的结果)
+		
+		var a=1;
+		(function(){
+			alert(a);
+			let a = 2;
+		})(); //结果：报错a未定义
+	</script>
+</html>

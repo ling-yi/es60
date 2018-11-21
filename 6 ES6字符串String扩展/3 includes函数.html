@@ -1,0 +1,25 @@
+<!--
+	includes()函数：判断字符串中是否含有指定的子字符串。第二个参数选填，表示开始搜索的位置
+	(对比)传统做法借助indexOf()函数实现，如果含有指定的字符串，indexOf()函数就会返回子字符串首次出现的位置，不含有，则返回-1.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var name = "前端君";
+		
+		//includes()函数
+		console.log(name.includes('君'));//true
+		console.log(name.includes('web'));//false
+		console.log(name.includes('前',1));//false
+		
+		//indexOf()函数
+		console.log(name.indexOf('君'));//2
+		console.log(name.indexOf('web'));//-1
+	</script>
+</html>

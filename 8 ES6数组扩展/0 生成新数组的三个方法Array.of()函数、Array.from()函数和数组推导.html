@@ -1,0 +1,37 @@
+<!--
+	1 Array.of函数：直接将一组值转换为数组
+	2 Array.from函数：将类似数组的对象或者可遍历的对象转换为真正的数组
+	3 数组推导（已经被移除，是非标准的，不要使用）
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/browser.js" ></script>
+	</head>
+	<body>
+	</body>
+	<script>
+		//Array.of函数：将一组值转换成数组
+		console.log(Array.of(1,2,3,4,5));//[1, 2, 3, 4, 5]
+		
+		//Array.from()函数：将类似数组的对象或者可遍历的对象转换为真正的数组
+		let ele = document.getElementsByTagName('a');
+		//在 JavaScript 中，判断一个变量的类型尝尝会用 typeof 运算符，在使用 typeof 运算符时采用引用类型存储值会出现一个问题，无论引用的是什么类型的对象，它都返回 "object"。ECMAScript 引入了另一个 Java 运算符 instanceof 来解决这个问题。instanceof 运算符与 typeof 运算符相似，用于识别正在处理的对象的类型。与 typeof 方法不同的是，instanceof 方法要求开发者明确地确认对象为某特定类型
+		console.log(ele instanceof Array);//false
+		console.log(ele instanceof Object);//true
+		console.log(Array.from(ele) instanceof Array);//true
+		
+		//Array.from函数的其中一个用处：将字符串转换成数组
+		let str = 'hello';
+		console.log(Array.from(str));//["h", "e", "l", "l", "o"]
+		
+		//数组推到：用简洁的写法，直接通过现有的数组生成新数组。最初起草在ECMAScript 6草案中，但在第27版（2014年8月）中被移除。所以，它是非标准的，不要使用。
+//		var arr1 = [1, 2, 3, 4];
+//  	var arr2 = [for(i of arr1) i * 2];//错误：Uncaught SyntaxError: Unexpected token for
+//  	console.log(arr2);
+    	
+    
+	</script>
+</html>
